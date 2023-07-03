@@ -1,19 +1,18 @@
 import React from 'react';
 import './stylesheets/App.scss';
-import bgVideo from "./assets/cityScape.mp4"
+import bgImage from './assets/cnTowerImage.jpg'
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 function App() {
 
   return (
-    <>
-
-      <div className='flex bg-slate-100 p-6'>Tool bar</div>
-
-      <div className="">
-          <video src={bgVideo} autoPlay loop muted className="min-w-full p-0"></video>
+    <div>
+      <div className="flex flex-col">
+        <div className="flex bg-cyan-200">Toolbar</div>
+        <AspectRatio ratio={16 / 9}>
+          <img src={bgImage}></img>
+        </AspectRatio>
       </div>
-
-    </>
+    </div>
   );
 }
 
