@@ -7,10 +7,21 @@ function App() {
   return (
     <div>
       <div className="flex flex-col">
-        <div className="flex bg-cyan-200">Toolbar</div>
-        <AspectRatio ratio={16 / 9}>
-          <img src={bgImage}></img>
-        </AspectRatio>
+        <div className="flex">
+
+        </div>
+        
+        <div className="bg-[url('../assets/cnTowerImage.jpg')]">
+
+          <div className="grid grid-cols-3 h-screen">
+            <div className="flex justify-center items-center bg-black opacity-70">
+              <div className="opacity-100 text-white font-extrabold text-7xl px-5">
+                Life is short, so isn't it worth living to the fullest?
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   );
