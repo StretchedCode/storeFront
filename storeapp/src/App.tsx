@@ -18,7 +18,7 @@ function App() {
         <Taskbar></Taskbar>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/shop' element={<Shop></Shop>}></Route>
+          <Route path='/shop/*' element={<Shop></Shop>}></Route>
         </Routes>
 
       </div>
