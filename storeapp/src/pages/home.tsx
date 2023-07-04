@@ -1,9 +1,11 @@
 
 import { Button } from "../components/button";
 import { Link, useNavigate } from "react-router-dom";
+import seeData from "../database/db";
 
 function Home(){
   const navigate = useNavigate()
+  seeData()
 
     return (
         <div className="bg-[url('../assets/cnTowerImage.jpg')]">
