@@ -22,7 +22,7 @@ function Taskbar(){
                             </NavigationMenuTrigger>
                             <NavigationMenuContent className="">
                                 <div className="grid grid-cols-1 w-[400px] gap-2 p-2">
-                                    <NavigationMenuLink href="/shop" className="flex gap-2 gap-x-4 p-2 hover:bg-slate-100 rounded-md">
+                                    <NavigationMenuLink href="/shop/processors" className="flex gap-2 gap-x-4 p-2 hover:bg-slate-100 rounded-md">
                                         <div className="self-center">
                                             <img className="h-16 min-w-[64px]" alt="processor" src={cpuImage}></img>
                                         </div>
