@@ -10,9 +10,9 @@ import { Routes, Route } from "react-router-dom"
 
 function Shop(){
     const dispatch = useAppDispatch()
+    const data = processCPUData()
 
     const renderCPUData = () => {
-        const data = processCPUData()
         const dataVis: React.ReactElement[] = []
 
         data.forEach((obj) => {
