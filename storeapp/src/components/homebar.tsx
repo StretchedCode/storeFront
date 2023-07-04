@@ -52,8 +52,7 @@ function Taskbar(){
 
         for (let i = 0; i < 3; i++){
             const component = <div>
-                <NavigationMenuLink>
-                    <Link to='/shop' className="flex gap-2 gap-x-4 p-2 hover:bg-slate-100 rounded-md">
+                <NavigationMenuLink href="/shop" className="flex gap-2 gap-x-4 p-2 hover:bg-slate-100 rounded-md">
                         <div className="self-center">
                             <Skeleton className="rounded-full h-12 w-12"></Skeleton>
                         </div>
@@ -62,8 +61,6 @@ function Taskbar(){
                             <div className="text-m font-semibold">{components[i].title}</div>
                             <div className="text-sm">{components[i].description}</div>
                         </div>
-                        
-                    </Link>
                 </NavigationMenuLink>
             </div>
             componentArray.push(component)
@@ -74,7 +71,7 @@ function Taskbar(){
     const navigate = useNavigate()
 
     return (
-        <div className="flex justify-between items-center p-6">
+        <div className="flex justify-between items-center p-6 shadow-sm">
             <Button variant="ghost" className="text-xl hover:bg-white" onClick={() => {navigate("/")}}>Home Bar</Button>
             <div className="flex gap-3">
                 <NavigationMenu className="mr-48" orientation="horizontal">
