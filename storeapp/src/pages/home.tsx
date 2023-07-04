@@ -1,7 +1,9 @@
 
 import { Button } from "../components/button";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home(){
+  const navigate = useNavigate()
 
     return (
         <div className="bg-[url('../assets/cnTowerImage.jpg')]">
@@ -14,7 +16,7 @@ function Home(){
                 Life is short, so isn't it worth living to the fullest?
               </div>
 
-              <Button variant="outline" className="bg-black text-white font-bold rounded-none w-60">Explore Life</Button>
+              <Button variant="outline" className="bg-black text-white font-bold rounded-none w-60" onClick={() => {navigate('/shop')}}>Explore Life</Button>
 
             </div>
 
