@@ -5,6 +5,7 @@ import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { Button } from './components/button';
 import Taskbar from './components/homebar';
 import Home from './pages/home';
+import Shop from './pages/shop';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -17,6 +18,7 @@ function App() {
         <Taskbar></Taskbar>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/shop' element={<Shop></Shop>}></Route>
         </Routes>
 
       </div>
