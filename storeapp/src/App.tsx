@@ -4,7 +4,7 @@ import bgImage from './assets/cnTowerImage.jpg'
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { Button } from './components/button';
 import Taskbar from './components/homebar';
-import Home from './components/home';
+import Home from './pages/home';
 import { Routes, Route } from 'react-router-dom';
 
 
