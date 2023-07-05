@@ -3,6 +3,7 @@
 import cpuData from "./tableExportCPU.json"
 import gpuData from "./tableExportGPU.json"
 import cpuImage from "../assets/processorImg.jpeg"
+import gpuImage from "../assets/gpuImage.jpg"
 
 // Mock database file for loading shop components
 
@@ -14,10 +15,10 @@ interface product{
     imgSrc?: string
 }
 
-const processCPUData = () => {
-    const processorData: product[] = []
+const processData = () => {
+    const data: product[] = []
 
-    for(let i = 1; i <= 21; i++){
+    for(let i = 1; i <= 6; i++){
         const dataObj:product = {
             type: 'cpu',
             name: (cpuData.data[i].Model).toString(),
@@ -25,10 +26,21 @@ const processCPUData = () => {
             id: i,
             imgSrc: cpuImage
         }
-        processorData.push(dataObj)
+        data.push(dataObj)
     }
 
-    return processorData
+    for(let i = 1; i <= 6; i++){
+        const dataObj:product = {
+            type: 'gpu',
+            name: (gpuData.data[i].Model).toString(),
+            price: 500,
+            id: i,
+            imgSrc: gpuImage
+        }
+        data.push(dataObj)
+    }
+
+    return data
 }
 
 
@@ -37,5 +49,5 @@ export default function seeData(){
     console.log(gpuData)
 }
 
-export {processCPUData}
+export {processData}
 export type {product as productType}
