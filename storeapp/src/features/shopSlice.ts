@@ -8,12 +8,14 @@ interface productShop extends productType{
 
 interface shopState{
     products: productShop[],
-    compProducts: string[]
+    compProducts: string[],
+    totalProducts: number
 }
 
 const initialState: shopState = {
     products: [],
-    compProducts: []
+    compProducts: [],
+    totalProducts: 0
 }
 
 const shopSlice = createSlice({
@@ -36,10 +38,24 @@ const shopSlice = createSlice({
                 state.compProducts.push(newProdName)
                 state.products.push(newProd)
             }
-            
+
+            state.totalProducts ++;
+        },
+        removeProduct: (state, action:PayloadAction<productType>) => {
+            state.totalProducts --;
+
+            const dbIndex = state.compProducts.indexOf(action.payload.name)
+
+            if (state.products[dbIndex].count > 1) {
+                state.products[dbIndex].count --;
+            }
+            else{
+                state.products.splice(dbIndex, 1)
+                state.compProducts.splice(dbIndex, 1)
+            }
         }
     }
 })
 
 export default shopSlice.reducer
-export const {addProduct} = shopSlice.actions
+export const {addProduct, removeProduct} = shopSlice.actions
