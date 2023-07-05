@@ -18,7 +18,7 @@ function Home(){
                 Life is short, so isn't it worth living to the fullest?
               </div>
 
-              <Button variant="outline" className="bg-black text-white font-bold rounded-none w-60" onClick={() => {navigate('/shop')}}>Explore Life</Button>
+              <Button variant="outline" className="bg-black text-white font-bold rounded-none w-60" onClick={() => {navigate('/shop', {state: {type: 'all'}})}}>Explore Life</Button>
 
             </div>
 
